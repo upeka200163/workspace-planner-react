@@ -83,13 +83,13 @@ With advanced Glassmorphism effects, floating neon visuals, and modular React ar
 
 # 🎨 Design Highlights
 
-✨ Cyberpunk-Inspired Interface
-✨ Glassmorphism UI Components
-✨ Neon Glow Visual Effects
-✨ Responsive Workspace Layouts
-✨ Smooth Animations & Hover Effects
-✨ Optimized User Experience (UX)
-✨ Modern React Component Architecture
+✨ Cyberpunk-Inspired Interface  <br />
+✨ Glassmorphism UI Components   <br />
+✨ Neon Glow Visual Effects      <br />
+✨ Responsive Workspace Layouts  <br />
+✨ Smooth Animations & Hover Effects  <br />
+✨ Optimized User Experience (UX)   <br />
+✨ Modern React Component Architecture  <br />
 
 ---
 
@@ -154,7 +154,7 @@ npm start
 The application will automatically run on:
 
 ```bash id="llag1n"
-http://localhost:3000
+http://localhost:5173/
 ```
 
 ---
@@ -206,15 +206,6 @@ workspace-planner/
 * 📊 Productivity Analytics Dashboard
 
 ---
-
-# 👩‍💻 Author
-
-**Upeka Sewwandi**
-🎓 Undergraduate at NSBM Green University
-💡 Passionate about Web Development & UI/UX Design
-
----
-
 # 🤝 Contribution Framework
 
 Contributions, bug fixes, and feature improvements are welcome.
