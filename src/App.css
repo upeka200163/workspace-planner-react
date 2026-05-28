@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  
+  background: radial-gradient(circle at 50% 50%, #1a3c6d 0%, #0f2347 50%, #060b14 100%);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #1e293b;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Base Wrapper Container */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* 1. Cyberpunk Matrix Grid Lines Overlay */
+.tech-grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.06) 1px, transparent 1px);
+  background-size: 45px 45px;
+  z-index: -2;
+}
+
+/* 2. Glowing Neon Orbs in Background  */
+.neon-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  opacity: 0.55;
+  animation: pulseGlow 10s infinite alternate ease-in-out;
+}
+
+.orb-cyan {
+  width: 400px;
+  height: 400px;
+  background: #38bdf8;
+  top: 10%;
+  left: 5%;
+}
+
+.orb-purple {
+  width: 500px;
+  height: 500px;
+  background: #6366f1;
+  bottom: 5%;
+  right: 2%;
+  animation-delay: -2s;
+}
+
+.orb-pink {
+  width: 350px;
+  height: 350px;
+  background: #ec4899;
+  top: 40%;
+  right: 20%;
+  opacity: 0.25;
+  animation-delay: -5s;
+}
+
+/* 3. Floating 3D Emojis Styles  */
+.floating-tech-icon {
+  position: absolute;
+  font-size: 36px;
+  opacity: 0.85;
+  z-index: -1;
+  /* නියම 3D Glow එකක් දීම */
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  animation: floatMotion 7s infinite ease-in-out;
+}
+
+.element-1 { top: 20%; left: 12%; animation-delay: 0s; }
+.element-2 { bottom: 25%; left: 14%; animation-delay: 1.8s; }
+.element-3 { top: 30%; right: 10%; animation-delay: 3.5s; }
+.element-4 { bottom: 15%; right: 15%; animation-delay: 5.2s; }
+
+/* Motion Animations */
+@keyframes floatMotion {
+  0% { transform: translateY(0px) rotate(0deg) scale(1); }
+  50% { transform: translateY(-15px) rotate(5deg) scale(1.05); }
+  100% { transform: translateY(0px) rotate(0deg) scale(1); }
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1); opacity: 0.45; }
+  100% { transform: scale(1.15); opacity: 0.65; }
+}
+
+/* Main Box Container - Premium Clean UI Card */
+.todo-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+/* Header UI */
+.todo-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.sub-title {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Layout Inputs */
+.heading-input-container, .item-input-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #f8fafc;
+}
+
+input[type="text"]:focus {
+  border-color: #10b981;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+/* Buttons Controls */
+button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.btn-add-heading {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.btn-add-heading:hover {
+  background-color: #1e293b;
+}
+
+.btn-add-item {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.btn-add-item:hover {
+  background-color: #059669;
+}
+
+/* Category Inside Cards */
+.headings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.heading-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 12px;
+}
+
+.title-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.heading-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.task-count {
+  background-color: #f1f5f9;
+  color: #64748b;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn-delete-heading {
+  background-color: transparent;
+  color: #94a3b8;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.btn-delete-heading:hover {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+/* Rows with Dynamic Green Accent */
+.items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border-left: 4px solid #10b981;
+  transition: all 0.2s ease;
+}
+
+.item-row:hover {
+  background: #f1f5f9;
+}
+
+.item-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bullet-point {
+  width: 6px;
+  height: 6px;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+
+.item-row span {
+  font-size: 14px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.btn-delete-item {
+  background: transparent;
+  color: #94a3b8;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.btn-delete-item:hover {
+  background-color: #fecaca;
+  color: #dc2626;
+}
+
+/* Empty State Styling */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8fafc;
+  border: 2px dashed #e2e8f0;
+  border-radius: 16px;
+}
+
+.empty-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.empty-state h3 {
+  margin: 0 0 6px 0;
+  color: #475569;
+  font-size: 16px;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
