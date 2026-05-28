@@ -8,13 +8,6 @@ The application enables users to efficiently organize workflows, manage categori
 
 ---
 
-# 🌍 Live Preview
-
-🔗 **Live Demo:**
-[ඔබේ Netlify / Vercel / GitHub Pages Link එක මෙතන දාන්න]
-
----
-
 # ✨ Project Overview
 
 Workspace Planner is crafted for professionals, developers, and productivity-focused users who require a modern digital workspace for managing complex tasks efficiently.
