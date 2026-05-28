@@ -124,7 +124,7 @@ Ensure your system has:
 ## Clone the Repository
 
 ```bash id="m3r9al"
-git clone https://github.com/YOUR_GITHUB_USERNAME/workspace-planner.git
+git clone https://github.com/upeka200163/workspace-planner-react.git
 ```
 
 ---
